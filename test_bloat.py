@@ -1,7 +1,7 @@
 import os, errno, subprocess, sys
 
 def callCommand(command):
-    process = subprocess.Popen(command, stdout=subprocess.PIPE)
+    process = subprocess.Popen(command)
     process.communicate()
     process.wait()
 
