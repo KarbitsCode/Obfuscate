@@ -13,7 +13,7 @@ def main():
         if e.errno != errno.EEXIST:
             raise
     os.chdir(dir)
-    callCommand(["cmake", ".."])
+    callCommand(["cmake", "..", "-DCMAKE_POLICY_VERSION_MINIMUM=3.5"])
     callCommand(["cmake", "--build", ".", "--config", "Debug"])
     callCommand(["cmake", "--build", ".", "--config", "Release"])
     os.chdir("..")
